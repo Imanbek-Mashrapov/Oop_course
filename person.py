@@ -6,6 +6,9 @@ class Person:
         self.major = major
         self.gpa = gpa
 
+    def get_major(self):
+        print(f"{self.name} {self.surname} has major in {self.major}")
+
     def walk(self):
         print(f"{self.name} {self.surname} is walking")
 
