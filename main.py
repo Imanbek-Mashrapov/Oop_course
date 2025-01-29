@@ -1,15 +1,20 @@
-from person import Person
+from student import Student
 
 if __name__ == "__main__":
 
-    person1 = Person('Ruslan', 'Asanov', student_id=1)
-    person2 = Person('Aman', 'Talgatov', student_id=1)
-    person3 = Person('Sultan', 'Bakytbek uulu', student_id=1)
-    person4 = Person('Damir', 'Imanaliev', student_id=1)
+    x = int(input("How many objects of Student class do you want to make: "))
+    lst_students = []
 
-    lst = [person1, person2, person3, person4]
+    for i in range(1, x+1):
+        name = input(f"Enter the name of student #{i}: ")
+        surname = input(f"Enter the surname of student #{i}: ")
+        student_id = int(input(f"Enter the student ID #{i}: "))
+        major = input(f"Enter the major of student #{i}: ")
+        gpa = float(input(f"Enter the gpa of student #{i}: "))
 
+        lst_students.append(Student(name, surname, student_id, major, gpa))
 
-    for x in lst:
-        print(x.walk())
+    for person in lst_students:
+        person.display_info()
+        print(f"The Grade is {person.get_alphabetic_grade()}")
 
