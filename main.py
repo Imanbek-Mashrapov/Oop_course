@@ -1,6 +1,7 @@
 from person import Person
 
 if __name__ == "__main__":
+
     person1 = Person('Ruslan', 'Asanov', student_id=1)
     person2 = Person('Aman', 'Talgatov', student_id=1)
     person3 = Person('Sultan', 'Bakytbek uulu', student_id=1)
